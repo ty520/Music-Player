@@ -21,6 +21,8 @@ webAudio对音频的分析；
 HTML5根音频，利用canvas绘制音频矩形图和原点图；
 
 grunt-contrib-requirejs配置：
+
+
 requirejs: {
 			compile: {
 				options: {
