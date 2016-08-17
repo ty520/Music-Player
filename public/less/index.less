@@ -1,0 +1,85 @@
+@zero: 0px;
+@max: 100%;
+@font-size: 14px;
+@color: #000000;
+@averageSize: 10px;
+@colorWhite: #ffffff;
+
+.border {
+	border: solid 1px @colorWhite;
+}
+
+.block(@top, @right, @bottom, @left) {
+	top: @top;
+	left: @left;
+	right: @right;
+	bottom: @bottom;
+}
+* {
+	padding: @zero;
+	margin: @zero;
+	box-sizing: border-box;
+}
+html, 
+body {
+	height: @max;
+}
+body {
+	font: @font-size "Lucida Grande", Helvetica, Arial, sans-serif;
+	background: #000000;
+	color: #ffffff;
+}
+header, 
+aside,
+.right{
+	position: absolute;
+	.border;
+}
+header{
+	.block(@averageSize, @zero, @averageSize, @averageSize);
+	height: 15*@averageSize;
+	h1{
+		font-size: 4*@averageSize;
+		height: 6*@averageSize;
+		line-height: 6*@averageSize;
+	}
+	text-align: center;
+	button{
+		width: 5.5*@averageSize;
+		background-color: @color;
+		height: 2.5*@averageSize;
+		border-radius: 2px;
+		color: #ffffff;
+		.border;
+	}
+	button.selected{
+		background-color: #ffffff;
+		color: @color;
+	}
+	ul li{
+		margin-top: @averageSize;
+	}
+}
+aside{
+	.block(@averageSize*17, @zero, @averageSize, @averageSize);
+	width: 20* @averageSize;
+	height: @max;
+	.border;
+	ul{
+		overflow: auto;
+		li{
+			height: 3* @averageSize;
+			line-height: 3* @averageSize;
+			cursor: pointer;
+		}
+	}
+}
+aside ul li.selected {
+	color: green;
+}
+.right{
+	.block(17*@averageSize, @averageSize,@averageSize,22*@averageSize);
+	.border;
+	height: @max;
+}
+

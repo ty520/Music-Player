@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="renderer" content="webkit">
+  <meta name="viewport" content="width = device-width, inital-scale = 1.0, user-scalable = no">
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/index.css' />
+  </head>
+  <body>
+  <article>
+  	<header>
+    <h1><%= title %></h1>
+    <ul>
+      <li id = "button"> 
+        <button data-type="Dot" >Dot </button>
+        <button data-type="Column" >Column </button>
+      </li>
+      <li>
+        Volume <input type="range" name="volume" id="volume" min = "0" max = "100" value="60">
+     </li>
+    </ul>
+    </header>
+    <aside class = "left">
+    	<ul id = "music">
+    		<% music.forEach(function(name){ %>
+    			<li title = "<%= name%>"><%= name%></li>
+    			<% }) %>
+    	</ul>
+    </aside>
+    <div class = "right">
+    	
+    </div>
+  </article>
+   	<script data-main="dist/app.min.js" src="javascripts/require.js"></script>
+  </body>
+</html>
